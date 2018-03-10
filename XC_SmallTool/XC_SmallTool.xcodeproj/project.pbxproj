@@ -15,6 +15,16 @@
 		246D12012053C15B001847C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D12002053C15B001847C8 /* main.m */; };
 		246D120B2053C15C001847C8 /* XC_SmallToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D120A2053C15C001847C8 /* XC_SmallToolTests.m */; };
 		246D12162053C15C001847C8 /* XC_SmallToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D12152053C15C001847C8 /* XC_SmallToolUITests.m */; };
+		246D122F2053C563001847C8 /* UIView+XCFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D122E2053C562001847C8 /* UIView+XCFrame.m */; };
+		246D12322053C57D001847C8 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D12302053C57D001847C8 /* NSString+Helper.m */; };
+		246D12342053C5FA001847C8 /* XCFoundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D12332053C5FA001847C8 /* XCFoundation+Log.m */; };
+		246D12372053C667001847C8 /* UIButton+CGMCilckBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D12352053C666001847C8 /* UIButton+CGMCilckBtn.m */; };
+		246D123D2053C7E8001847C8 /* CGM_ViewControllerSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D12392053C7E8001847C8 /* CGM_ViewControllerSegment.m */; };
+		246D12412053C805001847C8 /* XCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D12402053C805001847C8 /* XCScrollView.m */; };
+		246D12452053C882001847C8 /* XCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D12442053C882001847C8 /* XCBaseViewController.m */; };
+		246D12482053C8AF001847C8 /* Demo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D12472053C8AF001847C8 /* Demo1ViewController.m */; };
+		246D124B2053C9B2001847C8 /* Demo1subViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D124A2053C9B2001847C8 /* Demo1subViewController.m */; };
+		246D124E2053D635001847C8 /* CGM_ViewControllerAutoSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D124C2053D635001847C8 /* CGM_ViewControllerAutoSegment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +61,26 @@
 		246D12112053C15C001847C8 /* XC_SmallToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XC_SmallToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		246D12152053C15C001847C8 /* XC_SmallToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XC_SmallToolUITests.m; sourceTree = "<group>"; };
 		246D12172053C15C001847C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		246D122C2053C464001847C8 /* smalltoolPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = smalltoolPCH.pch; sourceTree = "<group>"; };
+		246D122D2053C562001847C8 /* UIView+XCFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XCFrame.h"; sourceTree = "<group>"; };
+		246D122E2053C562001847C8 /* UIView+XCFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XCFrame.m"; sourceTree = "<group>"; };
+		246D12302053C57D001847C8 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		246D12312053C57D001847C8 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		246D12332053C5FA001847C8 /* XCFoundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCFoundation+Log.m"; sourceTree = "<group>"; };
+		246D12352053C666001847C8 /* UIButton+CGMCilckBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CGMCilckBtn.m"; sourceTree = "<group>"; };
+		246D12362053C666001847C8 /* UIButton+CGMCilckBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CGMCilckBtn.h"; sourceTree = "<group>"; };
+		246D12392053C7E8001847C8 /* CGM_ViewControllerSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGM_ViewControllerSegment.m; sourceTree = "<group>"; };
+		246D123C2053C7E8001847C8 /* CGM_ViewControllerSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGM_ViewControllerSegment.h; sourceTree = "<group>"; };
+		246D123F2053C805001847C8 /* XCScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCScrollView.h; sourceTree = "<group>"; };
+		246D12402053C805001847C8 /* XCScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCScrollView.m; sourceTree = "<group>"; };
+		246D12432053C882001847C8 /* XCBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCBaseViewController.h; sourceTree = "<group>"; };
+		246D12442053C882001847C8 /* XCBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCBaseViewController.m; sourceTree = "<group>"; };
+		246D12462053C8AF001847C8 /* Demo1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo1ViewController.h; sourceTree = "<group>"; };
+		246D12472053C8AF001847C8 /* Demo1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo1ViewController.m; sourceTree = "<group>"; };
+		246D12492053C9B2001847C8 /* Demo1subViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo1subViewController.h; sourceTree = "<group>"; };
+		246D124A2053C9B2001847C8 /* Demo1subViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo1subViewController.m; sourceTree = "<group>"; };
+		246D124C2053D635001847C8 /* CGM_ViewControllerAutoSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGM_ViewControllerAutoSegment.m; sourceTree = "<group>"; };
+		246D124D2053D635001847C8 /* CGM_ViewControllerAutoSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGM_ViewControllerAutoSegment.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +111,10 @@
 		246D11E52053C15B001847C8 = {
 			isa = PBXGroup;
 			children = (
+				246D12422053C873001847C8 /* BaseViewController */,
+				246D122B2053C40C001847C8 /* Tools */,
+				246D122A2053C405001847C8 /* Category */,
+				246D12232053C303001847C8 /* Demo */,
 				246D11F02053C15B001847C8 /* XC_SmallTool */,
 				246D12092053C15C001847C8 /* XC_SmallToolTests */,
 				246D12142053C15C001847C8 /* XC_SmallToolUITests */,
@@ -101,6 +135,7 @@
 		246D11F02053C15B001847C8 /* XC_SmallTool */ = {
 			isa = PBXGroup;
 			children = (
+				246D122C2053C464001847C8 /* smalltoolPCH.pch */,
 				246D11F12053C15B001847C8 /* AppDelegate.h */,
 				246D11F22053C15B001847C8 /* AppDelegate.m */,
 				246D11F42053C15B001847C8 /* ViewController.h */,
@@ -130,6 +165,109 @@
 				246D12172053C15C001847C8 /* Info.plist */,
 			);
 			path = XC_SmallToolUITests;
+			sourceTree = "<group>";
+		};
+		246D12232053C303001847C8 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				246D12262053C373001847C8 /* Demo1 */,
+				246D12242053C372001847C8 /* Demo2 */,
+				246D12252053C373001847C8 /* Demo3 */,
+				246D12292053C373001847C8 /* Demo4 */,
+				246D12282053C373001847C8 /* Demo5 */,
+				246D12272053C373001847C8 /* Demo6 */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		246D12242053C372001847C8 /* Demo2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo2;
+			sourceTree = "<group>";
+		};
+		246D12252053C373001847C8 /* Demo3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo3;
+			sourceTree = "<group>";
+		};
+		246D12262053C373001847C8 /* Demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				246D12462053C8AF001847C8 /* Demo1ViewController.h */,
+				246D12472053C8AF001847C8 /* Demo1ViewController.m */,
+				246D12492053C9B2001847C8 /* Demo1subViewController.h */,
+				246D124A2053C9B2001847C8 /* Demo1subViewController.m */,
+			);
+			path = Demo1;
+			sourceTree = "<group>";
+		};
+		246D12272053C373001847C8 /* Demo6 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo6;
+			sourceTree = "<group>";
+		};
+		246D12282053C373001847C8 /* Demo5 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo5;
+			sourceTree = "<group>";
+		};
+		246D12292053C373001847C8 /* Demo4 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Demo4;
+			sourceTree = "<group>";
+		};
+		246D122A2053C405001847C8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				246D12332053C5FA001847C8 /* XCFoundation+Log.m */,
+				246D12362053C666001847C8 /* UIButton+CGMCilckBtn.h */,
+				246D12352053C666001847C8 /* UIButton+CGMCilckBtn.m */,
+				246D12312053C57D001847C8 /* NSString+Helper.h */,
+				246D12302053C57D001847C8 /* NSString+Helper.m */,
+				246D122D2053C562001847C8 /* UIView+XCFrame.h */,
+				246D122E2053C562001847C8 /* UIView+XCFrame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		246D122B2053C40C001847C8 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				246D12382053C744001847C8 /* SegmentselectorView(分段选择器) */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		246D12382053C744001847C8 /* SegmentselectorView(分段选择器) */ = {
+			isa = PBXGroup;
+			children = (
+				246D124D2053D635001847C8 /* CGM_ViewControllerAutoSegment.h */,
+				246D124C2053D635001847C8 /* CGM_ViewControllerAutoSegment.m */,
+				246D123C2053C7E8001847C8 /* CGM_ViewControllerSegment.h */,
+				246D12392053C7E8001847C8 /* CGM_ViewControllerSegment.m */,
+				246D123F2053C805001847C8 /* XCScrollView.h */,
+				246D12402053C805001847C8 /* XCScrollView.m */,
+			);
+			path = "SegmentselectorView(分段选择器)";
+			sourceTree = "<group>";
+		};
+		246D12422053C873001847C8 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				246D12432053C882001847C8 /* XCBaseViewController.h */,
+				246D12442053C882001847C8 /* XCBaseViewController.m */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +403,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246D12482053C8AF001847C8 /* Demo1ViewController.m in Sources */,
+				246D12322053C57D001847C8 /* NSString+Helper.m in Sources */,
+				246D124B2053C9B2001847C8 /* Demo1subViewController.m in Sources */,
 				246D11F62053C15B001847C8 /* ViewController.m in Sources */,
+				246D122F2053C563001847C8 /* UIView+XCFrame.m in Sources */,
 				246D12012053C15B001847C8 /* main.m in Sources */,
+				246D12372053C667001847C8 /* UIButton+CGMCilckBtn.m in Sources */,
+				246D12342053C5FA001847C8 /* XCFoundation+Log.m in Sources */,
+				246D123D2053C7E8001847C8 /* CGM_ViewControllerSegment.m in Sources */,
+				246D12412053C805001847C8 /* XCScrollView.m in Sources */,
+				246D12452053C882001847C8 /* XCBaseViewController.m in Sources */,
 				246D11F32053C15B001847C8 /* AppDelegate.m in Sources */,
+				246D124E2053D635001847C8 /* CGM_ViewControllerAutoSegment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +580,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85X7688G9T;
+				GCC_PREFIX_HEADER = $SRCROOT/XC_SmallTool/smalltoolPCH.pch;
 				INFOPLIST_FILE = XC_SmallTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com..XC-SmallTool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,7 +596,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85X7688G9T;
+				GCC_PREFIX_HEADER = $SRCROOT/XC_SmallTool/smalltoolPCH.pch;
 				INFOPLIST_FILE = XC_SmallTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com..XC-SmallTool";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,0 +1,42 @@
+//
+//  smalltoolPCH.pch
+//  XC_SmallTool
+//
+//  Created by gao bin on 2018/3/10.
+//  Copyright © 2018年 gao bin. All rights reserved.
+//
+
+#ifndef smalltoolPCH_pch
+#define smalltoolPCH_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//颜色
+#define randomColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define Color(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define RandomColor [UIColor colorWithRed:arc4random() % 256 / 255.0 green:arc4random() % 256 / 255.0 blue:arc4random() % 256 / 255.0 alpha:1.0f]
+
+//弱引用
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self
+
+
+/***********屏幕适配*************/
+#define KmainScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KmainScreenHeiht [UIScreen mainScreen].bounds.size.height
+
+/**  自定义打印打印   */
+#ifdef DEBUG
+#define XCLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+#else
+#define XCLog(format, ...)
+#endif
+
+
+//#import "UIView+XCFrame.h" // 屏幕适配
+//#import "NSString+Helper.h"  //字符串处理
+//#import "UIButton+CGMCilckBtn.h"  //按钮快速点击
+
+
+
+#endif /* smalltoolPCH_pch */

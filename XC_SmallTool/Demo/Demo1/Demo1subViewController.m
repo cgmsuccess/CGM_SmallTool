@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = RandomColor ;
     
-    XCLog(@" -- --   %lf",self.view.frame.size.height);
+    XCLog(@"当前显示view 的角标 -- --   %ld",(long)self.index);
     
     
     //这里高度 - 64  

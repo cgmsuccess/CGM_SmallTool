@@ -10,4 +10,8 @@
 
 @interface Demo1subViewController : XCBaseViewController
 
+
+/**    index ;      ****/
+@property (nonatomic,assign)NSInteger index;
+
 @end

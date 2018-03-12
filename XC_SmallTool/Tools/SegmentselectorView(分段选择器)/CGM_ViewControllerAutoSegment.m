@@ -12,11 +12,12 @@
 #define CGMScreenWidth    [UIScreen mainScreen].bounds.size.width
 #define CGMScreenHight    [UIScreen mainScreen].bounds.size.height
 #define TitleScroviewAlpan 0.7f  //透明度
+#define  tagHeight  44   // 标签栏高度
+
 
 @interface CGM_ViewControllerAutoSegment ()<UIScrollViewDelegate>
 {
     UIButton *lastBtn;  //上一次选中的btn
-    
     CGFloat btnwidth; //总宽度低于屏幕物理宽度时,标题btn宽度
 }
 @property (nonatomic,strong)NSArray *CtrlArr;
@@ -79,16 +80,22 @@
     [super viewDidLayoutSubviews];
     
     /** 容器布局   */
-    self.CtrlScroollview.frame = CGRectMake(0,0,CGMScreenWidth, CGMScreenHight-44) ;
-    self.CtrlScroollview.contentSize = CGSizeMake(self.CtrlArr.count * CGMScreenWidth , CGMScreenHight-44);
+    self.CtrlScroollview.frame = CGRectMake(0,0,CGMScreenWidth, CGMScreenHight - tagHeight) ;
+    self.CtrlScroollview.contentSize = CGSizeMake(self.CtrlArr.count * CGMScreenWidth , CGMScreenHight - tagHeight);
     
-    /**   滑块布局  */
-    _toolsView.frame = CGRectMake(0, 43.5, CGMScreenWidth, 0.5);
-    self.titleScrollview.frame = CGRectMake(0, 0, CGMScreenWidth, 44);
+    /**   下划线  */
+    _toolsView.frame = CGRectMake(0, tagHeight - 0.5, CGMScreenWidth, 0.5);
     
+    /**  标签容器布局   */
+    self.titleScrollview.frame = CGRectMake(0, 0, CGMScreenWidth, tagHeight );
+
+    /**  滑块布局   */
+    self.backView.frame=CGRectMake(0, tagHeight - 3, btnwidth, 3);
+
     /**  标签布局   */
     CGFloat Zwidth = 0;  //每个btn宽度的总长
     CGFloat Fwidth;  //每个btn的frame
+   
     int i = 0 ;
     //获取所有button
     for (UIView *titleScrollview in self.titleScrollview.subviews) {
@@ -102,7 +109,7 @@
             CGFloat f=  [NSString autoWidthWithString:[self.childViewControllers[i] title]  Font:BtnFont]+10;
             Zwidth +=f;  //总宽度
             Fwidth =Zwidth-f; //frame 宽度
-            subBtn.frame=CGRectMake(Fwidth, 0, f, 41);
+            subBtn.frame=CGRectMake(Fwidth, 0, f, tagHeight - 3);
             subBtn.tag =10000+i;
             [subBtn addTarget:self action:@selector(cilckBtn:) forControlEvents:UIControlEventTouchUpInside];
             if (i == 0) {
@@ -122,12 +129,11 @@
         btnwidth =CGMScreenWidth/self.childViewControllers.count;
     }
     [self.titleScrollview addSubview:self.backView];
-    [self.view addSubview:self.toolsView];
     if (Zwidth<CGMScreenWidth) {
         //titlteBtn 居中显示
-        self.titleScrollview.contentSize =CGSizeMake((CGMScreenWidth-Zwidth)/2+Zwidth,44);
+        self.titleScrollview.contentSize =CGSizeMake((CGMScreenWidth-Zwidth) / 2 + Zwidth,tagHeight);
     }else{
-        self.titleScrollview.contentSize=CGSizeMake(Zwidth, 44);
+        self.titleScrollview.contentSize=CGSizeMake(Zwidth, tagHeight);
     }
     
     
@@ -167,7 +173,7 @@
 /**  默认未选中的颜色  */
 -(void)setBtnNormolColor:(UIColor *)btnNormolColor
 {
-    _btnSlectColor = btnNormolColor ;
+    _btnNormolColor = btnNormolColor ;
 }
 
 
@@ -182,7 +188,8 @@
     UIView *lineView = [UIView new];
     _toolsView = lineView ;
     _toolsView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.4f];
-    
+    [self.view addSubview:self.toolsView];
+
     self.titleScrollview.backgroundColor=[UIColor blackColor];
     self.titleScrollview.userInteractionEnabled =YES;
     [self.titleScrollview setShowsVerticalScrollIndicator:NO];
@@ -191,7 +198,6 @@
     self.titleScrollview.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:TitleScroviewAlpan];
     UIView *sliderview = [UIView new];
     self.backView = sliderview ;
-    self.backView.frame=CGRectMake(0, 41, btnwidth, 3);
     self.backView.backgroundColor =[UIColor greenColor];
     [self.titleScrollview addSubview:sliderview];
 
@@ -215,6 +221,7 @@
     }
     
     button.selected = YES;
+  
     if (self.btnSlectColor) {
         [button setTitleColor:self.btnSlectColor forState:UIControlStateNormal];
     }else{
@@ -234,7 +241,7 @@
     //这里是默认进入那个控制器
     XCLog(@"x_ScorllviewIndex = %lu" ,(long)_ScorllviewIndex) ;
     // 一些临时变量
-    CGFloat width = scrollView.frame.size.width;
+    CGFloat width = scrollView.frame.size.width;  // --->屏幕的宽度
     CGFloat height = scrollView.frame.size.height;
     CGFloat offsetX = scrollView.contentOffset.x;
     // 当前控制器需要显示的控制器的索引
@@ -245,15 +252,15 @@
 
     XCLog(@"---%@--",NSStringFromClass(button.class));
     //滑块位置
-    CGRect rect  =  CGRectMake(button.frame.origin.x, button.frame.origin.y+42, button.frame.size.width, 3) ;
+    CGRect rect  =  CGRectMake(button.frame.origin.x, button.frame.size.height , button.frame.size.width, 3) ;
     
     [UIView animateWithDuration:0.3f animations:^{
         self.backView.frame=rect;
     }];
     
     lastBtn.selected = NO;
-    if (_btnNormolColor) {
-        [lastBtn setTitleColor:_btnNormolColor forState:UIControlStateNormal];
+    if (self.btnNormolColor) {
+        [lastBtn setTitleColor:self.btnNormolColor forState:UIControlStateNormal];
     }else{
         [lastBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
@@ -298,7 +305,8 @@
         titleOffsetX.x = maxOffsetX;
     }
     // 修改偏移量
-    self.titleScrollview.contentOffset = titleOffsetX;
+    [self.titleScrollview  setContentOffset:titleOffsetX animated:YES];
+//    self.titleScrollview.contentOffset = titleOffsetX;
     // 取出需要显示的控制器
     UIViewController *willShowVc = self.childViewControllers[index];
     // 如果当前位置的控制器已经显示过了，就直接返回，不需要重复添加控制器的view

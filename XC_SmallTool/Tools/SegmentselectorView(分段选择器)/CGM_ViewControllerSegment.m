@@ -10,10 +10,12 @@
 #import "XCScrollView.h"
 #define CGMScreenWidth    [UIScreen mainScreen].bounds.size.width
 #define CGMScreenHight    [UIScreen mainScreen].bounds.size.height
+
+#define  tagHeight  44   // 标签栏高度
+
 @interface CGM_ViewControllerSegment ()<UIScrollViewDelegate>
 {
     UIButton *lastBtn;  //上一次选中的btn
-    UIView *backView;  //滑块
     CGFloat btnwidth; //button宽度
     UILabel *underline;//下划线
 }
@@ -22,6 +24,9 @@
 @property (nonatomic,strong)XCScrollView *titleScrollview;
 
 @property (nonatomic,strong)XCScrollView *CtrlScroollview;
+
+/**      滑块    ****/
+@property (nonatomic,strong)UIView *sliderView;
 
 @end
 
@@ -47,17 +52,67 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self addChildViewControllers];//添加控制器
-    
     [self NewCreateScorllview];  //添加标题
-    
     self.CtrlScroollview.scrollsToTop = NO ;
     self.titleScrollview.scrollsToTop = NO ;
     
-    [self scrollViewDidEndScrollingAnimation: self.CtrlScroollview ];
 
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    //内容容器布局
+    self.CtrlScroollview.frame = CGRectMake(0, 0,CGMScreenWidth, CGMScreenHight - tagHeight);
+    self.CtrlScroollview.contentSize = CGSizeMake(self.CtrlArr.count * CGMScreenWidth , CGMScreenHight - tagHeight );
+
+    //标签容器布局
+    self.titleScrollview.frame = CGRectMake(0, 0, CGMScreenWidth, tagHeight);
+    self.titleScrollview.contentSize=CGSizeMake(btnwidth * self.CtrlArr.count, tagHeight);
+
+    /**   滑块布局  */
+    _sliderView.frame = CGRectMake(0, tagHeight - 3, btnwidth, 3);
+    
+    /**  标签栏布局   */
+    self.titleScrollview.frame = CGRectMake(0, 0, CGMScreenWidth, tagHeight);
+    
+    /**  标签下划线布局   */
+    underline.frame = CGRectMake(0, tagHeight - 0.3, KmainScreenWidth, 0.3);
+    
+    
+    int i = 0 ;
+    //获取所有button
+    for (UIView *titleScrollview in self.titleScrollview.subviews) {
+        if ([[titleScrollview class] isEqual:[UIButton class]]) {
+            UIButton *button = (UIButton *)titleScrollview;
+         
+            if (_btnNormolColor) {
+                [button setTitleColor:_btnNormolColor forState:UIControlStateNormal];
+            }else{
+                [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            }
+            
+            button.frame=CGRectMake(btnwidth * i, 0, btnwidth, tagHeight - 3);
+            button.tag =10000+i;
+            [button addTarget:self action:@selector(cilckBtn:) forControlEvents:UIControlEventTouchUpInside];
+            if (i == 0) {
+                button.selected = YES;
+                if (_btnSlectColor) {
+                    [button setTitleColor:_btnSlectColor forState:UIControlStateNormal];
+                }else{
+                    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+                }
+                lastBtn = button;
+            }
+            i++ ;
+        }
+    }
+    
+    /**  偏移量   */
+    [self scrollViewDidEndScrollingAnimation: self.CtrlScroollview ];
     //指定的偏移量
     if (self.ScorllviewIndex != 0) {
-        
         CGPoint offset = self.CtrlScroollview.contentOffset;
         offset.x = self.ScorllviewIndex * CGMScreenWidth;
         [self.CtrlScroollview setContentOffset:offset animated:YES];
@@ -66,16 +121,7 @@
 }
 
 - (void)addChildViewControllers {
-    if (_titleHeight!=0) {
-        self.CtrlScroollview=[[XCScrollView alloc] initWithFrame:CGRectMake(0, _titleHeight,CGMScreenWidth, CGMScreenHight-_titleHeight - 64)];
-        //scorllview 容器宽度
-        self.CtrlScroollview.contentSize = CGSizeMake(self.CtrlArr.count * CGMScreenWidth , CGMScreenHight-_titleHeight - 64 );
-    }else{
-    self.CtrlScroollview=[[XCScrollView alloc] initWithFrame:CGRectMake(0, 44,CGMScreenWidth, CGMScreenHight-44 - 64)];
-    //scorllview 容器宽度
-    self.CtrlScroollview.contentSize = CGSizeMake(self.CtrlArr.count * CGMScreenWidth , CGMScreenHight-44 - 64);
-        
-    }
+    self.CtrlScroollview=[[XCScrollView alloc] init];
     
     self.CtrlScroollview.delegate =self;
     self.CtrlScroollview.pagingEnabled = YES;
@@ -89,101 +135,89 @@
 }
 
 -(void)NewCreateScorllview{
-    if (_titleHeight) {
-      self.titleScrollview = [[XCScrollView alloc] initWithFrame:CGRectMake(0, 0, CGMScreenWidth, _titleHeight)];
-    }else{
-        self.titleScrollview = [[XCScrollView alloc] initWithFrame:CGRectMake(0, 0, CGMScreenWidth, 44)];
-    }
     
+    /**  标签容器   */
+    self.titleScrollview = [[XCScrollView alloc] init];
     [self.view addSubview:self.titleScrollview];
-    if (_titleHeight) {
-        underline=[[UILabel alloc]initWithFrame:CGRectMake(0, _titleHeight-0.3, KmainScreenWidth, 0.3)];
-    }else{
-        underline=[[UILabel alloc]initWithFrame:CGRectMake(0, 44-0.3, KmainScreenWidth, 0.3)];
-    }
-    [self.view addSubview:underline];
+    
+    /**  标签容器的下划线   */
+    underline=[[UILabel alloc] init];
     underline.backgroundColor=[UIColor blackColor];
     [self.view addSubview:underline];
     
-    if (_titleScrollviewBackColor) {
-        self.titleScrollview.backgroundColor =_titleScrollviewBackColor;
-    }else{
-        self.titleScrollview.backgroundColor=[UIColor blackColor];
-    }
+
+    self.titleScrollview.backgroundColor=[UIColor blackColor];
     
     self.titleScrollview.userInteractionEnabled =YES;
+
+ 
+    /**  滑块   */
+    _sliderView =[[UIView alloc] init];
+   
+    //滑块颜色
+    
+    _sliderView.backgroundColor =[UIColor greenColor];
     
     if (self.CtrlArr.count<5) {
         btnwidth = CGMScreenWidth/self.CtrlArr.count;
     }else{
-         btnwidth = CGMScreenWidth/4;
+        btnwidth = CGMScreenWidth/4;
     }
-    
-    backView=[[UIView alloc] init];
-    if (_titleHeight!=0) {
-        backView.frame=CGRectMake(0, _titleHeight-3, btnwidth, 3);
-    }else{
-        backView.frame=CGRectMake(0, 41, btnwidth, 3);
-    }
-    if (_sliderBackColor) {
-        backView.backgroundColor =_sliderBackColor;
-
-    }else{
-    backView.backgroundColor =[UIColor greenColor];
-    }
-    
-    
     for (int i = 0; i<self.childViewControllers.count; i++) {
         
             UIButton *button= [UIButton buttonWithType:UIButtonTypeCustom];
             [button setTitle:[self.childViewControllers[i] title] forState:UIControlStateNormal];
-        if (_btnNormolColor) {
-            [button setTitleColor:_btnNormolColor forState:UIControlStateNormal];
+        [self.titleScrollview addSubview:button];
 
-        }else{
-            [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
         }
-        if (_titleHeight!=0) {
-            button.frame=CGRectMake(btnwidth*i, 0, btnwidth, _titleHeight);
-        }else{
-            button.frame=CGRectMake(btnwidth*i, 0, btnwidth, 41);
-        }
-            button.tag =10000+i;
-            [button addTarget:self action:@selector(cilckBtn:) forControlEvents:UIControlEventTouchUpInside];
-            [self.titleScrollview addSubview:button];
-            if (i == 0) {
-                button.selected = YES;
-                if (_btnSlectColor) {
-                    [button setTitleColor:_btnSlectColor forState:UIControlStateNormal];
-                }else{
-                    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-                }
-                lastBtn = button;
-            }
-        }
-    [self.titleScrollview addSubview:backView];
-
-    if (_titleHeight!=0) {
-        self.titleScrollview.contentSize=CGSizeMake(btnwidth*self.childViewControllers.count, _titleHeight);
-    }else{
-        self.titleScrollview.contentSize=CGSizeMake(btnwidth*self.childViewControllers.count, 44);
-    }
-
+    [self.titleScrollview addSubview:_sliderView];
 }
 
+/**  滑块的颜色   */
+-(void)setSliderBackColor:(UIColor *)sliderBackColor
+{
+    _sliderBackColor = sliderBackColor ;
+    self.sliderView.backgroundColor = sliderBackColor;
+}
+
+/**  标签栏颜色   */
+-(void)setTitleScrollviewBackColor:(UIColor *)titleScrollviewBackColor
+{
+    _titleScrollviewBackColor = titleScrollviewBackColor;
+    self.titleScrollview.backgroundColor =_titleScrollviewBackColor;
+}
+
+
+/**  默认选中时的颜色   */
+-(void)setBtnSlectColor:(UIColor *)btnSlectColor
+{
+    _btnSlectColor = btnSlectColor;
+}
+
+/**  默认未选中的颜色  */
+-(void)setBtnNormolColor:(UIColor *)btnNormolColor
+{
+    _btnNormolColor = btnNormolColor ;
+}
+
+
+
+
+/**  标签选择   */
 -(void)cilckBtn:(UIButton *)btn{
     UIButton *button = [self.titleScrollview viewWithTag:btn.tag];
     lastBtn.selected = NO;
-    if (_btnNormolColor) {
-        [lastBtn setTitleColor:_btnNormolColor forState:UIControlStateNormal];
+    if (self.btnNormolColor) {
+        [lastBtn setTitleColor:self.btnNormolColor forState:UIControlStateNormal];
         
     }else{
         [lastBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
     
     button.selected = YES;
-    if (_btnSlectColor) {
-        [button setTitleColor:_btnSlectColor forState:UIControlStateNormal];
+    if (self.btnSlectColor) {
+        [button setTitleColor:self.btnSlectColor forState:UIControlStateNormal];
     }else{
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     }
@@ -199,12 +233,9 @@
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     
-//    if (_ScorllviewIndex) {
-//         self.CtrlScroollview.contentOffset=CGPointMake(CGMScreenWidth*_ScorllviewIndex, CGMScreenHight-44);
-//    }
-    
+
     // 一些临时变量
-    CGFloat width = scrollView.frame.size.width;
+    CGFloat width = scrollView.frame.size.width;  //屏幕宽度
     CGFloat height = scrollView.frame.size.height;
     CGFloat offsetX = scrollView.contentOffset.x;
     // 当前控制器需要显示的控制器的索引
@@ -212,22 +243,20 @@
     
     // 让对应的顶部标题居中显示
     UIButton *button = self.titleScrollview.subviews[index];
-    
-    if (_titleHeight!=0) {
-        [UIView animateWithDuration:0.3f animations:^{
-            backView.frame=CGRectMake(btnwidth*index, _titleHeight-3, btnwidth, 3);
-        }];
-    }else{
+    //滑块位置
+    CGRect rect  =  CGRectMake(button.frame.origin.x, button.frame.size.height, button.frame.size.width, 3) ;
+
     [UIView animateWithDuration:0.3f animations:^{
-        backView.frame=CGRectMake(btnwidth*index, 41, btnwidth, 3);
+        _sliderView.frame = rect;
     }];
-    }
+    
     
     lastBtn.selected = NO;
-    if (_btnNormolColor) {
-        [lastBtn setTitleColor:_btnNormolColor forState:UIControlStateNormal];
+   
+    if (self.btnNormolColor) {
+        [lastBtn setTitleColor:self.btnNormolColor forState:UIControlStateNormal];
     }else{
-    [lastBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [lastBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
     
     if (![button isKindOfClass:[UIButton class]]) {
@@ -235,8 +264,8 @@
     }
     button.selected = YES;
     
-    if (_btnSlectColor) {
-        [button setTitleColor:_btnSlectColor forState:UIControlStateNormal];
+    if (self.btnSlectColor) {
+        [button setTitleColor:self.btnSlectColor forState:UIControlStateNormal];
     }else{
         [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
 
@@ -244,12 +273,14 @@
     lastBtn = button;
 
     CGPoint titleOffsetX = self.titleScrollview.contentOffset;
+    //按钮位置是否超过了屏幕的中间
     titleOffsetX.x = button.center.x - width/2;
     // 左边偏移量边界
     if(titleOffsetX.x < 0) {
         titleOffsetX.x = 0;
     }
     
+    //最大可偏移量
     CGFloat maxOffsetX = self.titleScrollview.contentSize.width - width;
     // 右边偏移量边界
     if(titleOffsetX.x > maxOffsetX) {
@@ -257,7 +288,9 @@
     }
     
     // 修改偏移量
-    self.titleScrollview.contentOffset = titleOffsetX;
+    [self.titleScrollview  setContentOffset:titleOffsetX animated:YES];
+
+//    self.titleScrollview.contentOffset = titleOffsetX;
     
     // 取出需要显示的控制器
     UIViewController *willShowVc = self.childViewControllers[index];
@@ -280,14 +313,6 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self scrollViewDidEndScrollingAnimation:scrollView]; //加载ctrl
 }
-
-
-// 将要减速
-//-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
-//    [self scrollViewDidEndScrollingAnimation:scrollView]; //上面title和ctrl保持一致
-//
-//}
-
 
 
 - (void)didReceiveMemoryWarning {

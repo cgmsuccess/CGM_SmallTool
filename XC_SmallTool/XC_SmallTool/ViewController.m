@@ -29,7 +29,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO ;
     [self.tableVIew registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
-    self.dataSource = @[@"分段选择器Demo1",@"基本形状绘制圆形矩形三角形等Demo2",@"下载进度Demo3",@"饼图的基本绘制Demo4",@"柱状图Demo5",@"uikit 基本绘图，如绘制文字，矩形等Demo6",@"给图片添加文字或者图片水印,生成新的图片Demo7",@"剪切圆Demo8",@"截屏Demo9"];
+    self.dataSource = @[@"分段选择器标签自适应Demo1",@"分段选择器标签不适应Demo2",];
 }
 
 

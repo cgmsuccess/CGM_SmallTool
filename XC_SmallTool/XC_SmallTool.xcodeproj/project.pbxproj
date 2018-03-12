@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2463FFEF20561FE80031355E /* Demo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2463FFEE20561FE80031355E /* Demo2ViewController.m */; };
 		246D11F32053C15B001847C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D11F22053C15B001847C8 /* AppDelegate.m */; };
 		246D11F62053C15B001847C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D11F52053C15B001847C8 /* ViewController.m */; };
 		246D11F92053C15B001847C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246D11F72053C15B001847C8 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2463FFED20561FE80031355E /* Demo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2ViewController.h; sourceTree = "<group>"; };
+		2463FFEE20561FE80031355E /* Demo2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo2ViewController.m; sourceTree = "<group>"; };
 		246D11EE2053C15B001847C8 /* XC_SmallTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XC_SmallTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246D11F12053C15B001847C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		246D11F22053C15B001847C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 		246D12242053C372001847C8 /* Demo2 */ = {
 			isa = PBXGroup;
 			children = (
+				2463FFED20561FE80031355E /* Demo2ViewController.h */,
+				2463FFEE20561FE80031355E /* Demo2ViewController.m */,
 			);
 			path = Demo2;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				246D12412053C805001847C8 /* XCScrollView.m in Sources */,
 				246D12452053C882001847C8 /* XCBaseViewController.m in Sources */,
 				246D11F32053C15B001847C8 /* AppDelegate.m in Sources */,
+				2463FFEF20561FE80031355E /* Demo2ViewController.m in Sources */,
 				246D124E2053D635001847C8 /* CGM_ViewControllerAutoSegment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

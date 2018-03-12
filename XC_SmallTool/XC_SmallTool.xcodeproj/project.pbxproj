@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24630002205674600031355E /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 24630001205674600031355E /* UIBarButtonItem+Extension.m */; };
 		2463FFEF20561FE80031355E /* Demo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2463FFEE20561FE80031355E /* Demo2ViewController.m */; };
+		2463FFF52056644D0031355E /* XCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2463FFF42056644D0031355E /* XCTabBarViewController.m */; };
+		2463FFF8205667D40031355E /* XCNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2463FFF7205667D40031355E /* XCNavigationViewController.m */; };
+		2463FFFC20566A1E0031355E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2463FFFB20566A1E0031355E /* SecondViewController.m */; };
+		2463FFFF20566A290031355E /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2463FFFE20566A290031355E /* ThreeViewController.m */; };
 		246D11F32053C15B001847C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D11F22053C15B001847C8 /* AppDelegate.m */; };
 		246D11F62053C15B001847C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246D11F52053C15B001847C8 /* ViewController.m */; };
 		246D11F92053C15B001847C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246D11F72053C15B001847C8 /* Main.storyboard */; };
@@ -46,8 +51,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24630000205674600031355E /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		24630001205674600031355E /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		2463FFED20561FE80031355E /* Demo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2ViewController.h; sourceTree = "<group>"; };
 		2463FFEE20561FE80031355E /* Demo2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo2ViewController.m; sourceTree = "<group>"; };
+		2463FFF32056644D0031355E /* XCTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCTabBarViewController.h; sourceTree = "<group>"; };
+		2463FFF42056644D0031355E /* XCTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCTabBarViewController.m; sourceTree = "<group>"; };
+		2463FFF6205667D40031355E /* XCNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCNavigationViewController.h; sourceTree = "<group>"; };
+		2463FFF7205667D40031355E /* XCNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCNavigationViewController.m; sourceTree = "<group>"; };
+		2463FFFA20566A1E0031355E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		2463FFFB20566A1E0031355E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		2463FFFD20566A290031355E /* ThreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeViewController.h; sourceTree = "<group>"; };
+		2463FFFE20566A290031355E /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		246D11EE2053C15B001847C8 /* XC_SmallTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XC_SmallTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246D11F12053C15B001847C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		246D11F22053C15B001847C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,9 +126,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2463FFF9205668C40031355E /* viewCtrl */ = {
+			isa = PBXGroup;
+			children = (
+				246D11F42053C15B001847C8 /* ViewController.h */,
+				246D11F52053C15B001847C8 /* ViewController.m */,
+				2463FFFA20566A1E0031355E /* SecondViewController.h */,
+				2463FFFB20566A1E0031355E /* SecondViewController.m */,
+				2463FFFD20566A290031355E /* ThreeViewController.h */,
+				2463FFFE20566A290031355E /* ThreeViewController.m */,
+			);
+			path = viewCtrl;
+			sourceTree = "<group>";
+		};
 		246D11E52053C15B001847C8 = {
 			isa = PBXGroup;
 			children = (
+				2463FFF9205668C40031355E /* viewCtrl */,
 				246D12422053C873001847C8 /* BaseViewController */,
 				246D122B2053C40C001847C8 /* Tools */,
 				246D122A2053C405001847C8 /* Category */,
@@ -141,8 +170,6 @@
 				246D122C2053C464001847C8 /* smalltoolPCH.pch */,
 				246D11F12053C15B001847C8 /* AppDelegate.h */,
 				246D11F22053C15B001847C8 /* AppDelegate.m */,
-				246D11F42053C15B001847C8 /* ViewController.h */,
-				246D11F52053C15B001847C8 /* ViewController.m */,
 				246D11F72053C15B001847C8 /* Main.storyboard */,
 				246D11FA2053C15B001847C8 /* Assets.xcassets */,
 				246D11FC2053C15B001847C8 /* LaunchScreen.storyboard */,
@@ -241,6 +268,8 @@
 				246D12302053C57D001847C8 /* NSString+Helper.m */,
 				246D122D2053C562001847C8 /* UIView+XCFrame.h */,
 				246D122E2053C562001847C8 /* UIView+XCFrame.m */,
+				24630000205674600031355E /* UIBarButtonItem+Extension.h */,
+				24630001205674600031355E /* UIBarButtonItem+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -271,6 +300,10 @@
 			children = (
 				246D12432053C882001847C8 /* XCBaseViewController.h */,
 				246D12442053C882001847C8 /* XCBaseViewController.m */,
+				2463FFF32056644D0031355E /* XCTabBarViewController.h */,
+				2463FFF42056644D0031355E /* XCTabBarViewController.m */,
+				2463FFF6205667D40031355E /* XCNavigationViewController.h */,
+				2463FFF7205667D40031355E /* XCNavigationViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -409,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				246D12482053C8AF001847C8 /* Demo1ViewController.m in Sources */,
+				2463FFF8205667D40031355E /* XCNavigationViewController.m in Sources */,
 				246D12322053C57D001847C8 /* NSString+Helper.m in Sources */,
 				246D124B2053C9B2001847C8 /* Demo1subViewController.m in Sources */,
 				246D11F62053C15B001847C8 /* ViewController.m in Sources */,
@@ -416,10 +450,14 @@
 				246D12012053C15B001847C8 /* main.m in Sources */,
 				246D12372053C667001847C8 /* UIButton+CGMCilckBtn.m in Sources */,
 				246D12342053C5FA001847C8 /* XCFoundation+Log.m in Sources */,
+				2463FFF52056644D0031355E /* XCTabBarViewController.m in Sources */,
 				246D123D2053C7E8001847C8 /* CGM_ViewControllerSegment.m in Sources */,
+				24630002205674600031355E /* UIBarButtonItem+Extension.m in Sources */,
+				2463FFFC20566A1E0031355E /* SecondViewController.m in Sources */,
 				246D12412053C805001847C8 /* XCScrollView.m in Sources */,
 				246D12452053C882001847C8 /* XCBaseViewController.m in Sources */,
 				246D11F32053C15B001847C8 /* AppDelegate.m in Sources */,
+				2463FFFF20566A290031355E /* ThreeViewController.m in Sources */,
 				2463FFEF20561FE80031355E /* Demo2ViewController.m in Sources */,
 				246D124E2053D635001847C8 /* CGM_ViewControllerAutoSegment.m in Sources */,
 			);

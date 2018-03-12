@@ -26,7 +26,7 @@
     
     self.title = @"分段控制器标签自适应";
     self.automaticallyAdjustsScrollViewInsets = NO ; //取消偏移
-    NSArray *titleArr = @[@"东邪",@"西毒",@"南帝",@"北丐",@"中神通",@"神雕侠侣",@"老顽童",@"周伯通"];
+    NSArray *titleArr = @[@"东邪",@"西毒",@"南帝",@"北丐",@"中神通",@"神雕英雄传",@"笑傲江湖",@"桃谷六仙",@"神雕侠侣",@"老顽童",@"周伯通"];
     NSMutableArray *ctrlArr = [NSMutableArray array]; //装控制器
     
     //Demo1subViewController  即我们的控制器。如果里面布局一样，但是数据源不一样，可以给每个控制器加属性，做区分，也可以创建多个控制器。加载到数组里面。 分段控制器，会给他们分配位置进行展示
@@ -52,6 +52,25 @@
     [self addChildViewController:_cgm_ctrl];  //不可缺少重要
     [self.view addSubview:_cgm_ctrl.view];
     
+}
+
+
+-(void)cilckback
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    XCLog(@"xx-x-x-cilckback  ");
+}
+
+-(void)cilckMore
+{
+    XCLog(@"xx-x-x-  cilckMore ")
+}
+
+
+
+-(void)dealloc
+{
+    XCLog(@" dealloc = %@" ,NSStringFromClass([self class]));
 }
 
 - (void)didReceiveMemoryWarning {

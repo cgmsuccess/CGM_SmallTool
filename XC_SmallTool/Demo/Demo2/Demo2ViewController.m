@@ -47,6 +47,13 @@
     [self.view addSubview:_cgm_ctrl.view];
 }
 
+
+
+-(void)dealloc
+{
+    XCLog(@" dealloc = %@" ,NSStringFromClass([self class]));
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "XCTabBarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 1.创建窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 2.设置窗口根控制器
+    XCTabBarViewController *kwVc = [[XCTabBarViewController alloc] init];
+    // init ->  initWithNibName 1.首先判断有没有指定nibName 2.判断下有没有跟类名同名xib
+    self.window.rootViewController = kwVc;
+    // 3.显示窗口 1.成为UIApplication主窗口 2.
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

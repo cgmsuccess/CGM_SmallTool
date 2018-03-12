@@ -1,33 +1,23 @@
 //
-//  Demo1subViewController.m
+//  SecondViewController.m
 //  XC_SmallTool
 //
-//  Created by gao bin on 2018/3/10.
+//  Created by gao bin on 2018/3/12.
 //  Copyright © 2018年 gao bin. All rights reserved.
 //
 
-#import "Demo1subViewController.h"
+#import "SecondViewController.h"
 
-@interface Demo1subViewController ()
+@interface SecondViewController ()
 
 @end
 
-@implementation Demo1subViewController
+@implementation SecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = RandomColor ;
-    
-    XCLog(@"当前显示view 的角标 -- --   %ld",(long)self.index);
-    
-    
-    //这里高度 - 64  
-    UIView *view = [UIView new];
-    view.backgroundColor = [UIColor yellowColor];
-    //如过是iPhone X 减去安全距离，减去顶部NAVERgationHeight 距离
-    view.frame = CGRectMake(0, self.view.frame.size.height - kBottomSafeHeight - kNavbarHeight  - 100, 100, 100);
-    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning {

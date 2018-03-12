@@ -142,7 +142,7 @@
     
     /**  标签容器的下划线   */
     underline=[[UILabel alloc] init];
-    underline.backgroundColor=[UIColor blackColor];
+    underline.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.4f];
     [self.view addSubview:underline];
     
 

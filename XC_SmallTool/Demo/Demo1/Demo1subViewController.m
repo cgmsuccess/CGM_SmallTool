@@ -25,7 +25,8 @@
     //这里高度 - 64  
     UIView *view = [UIView new];
     view.backgroundColor = [UIColor yellowColor];
-    view.frame = CGRectMake(0, self.view.frame.size.height - 100 - 64, 100, 100);
+    //如过是iPhone X 减去安全距离，减去顶部NAVERgationHeight 距离
+    view.frame = CGRectMake(0, self.view.frame.size.height - kBottomSafeHeight - kNavbarHeight - 100, 100, 100);
     [self.view addSubview:view];
 }
 

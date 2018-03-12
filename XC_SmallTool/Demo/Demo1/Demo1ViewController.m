@@ -42,7 +42,7 @@
     CGM_ViewControllerAutoSegment *segmentCtrl = [[CGM_ViewControllerAutoSegment alloc] initWithCtrltitle:ctrlArr];;
     segmentCtrl.view.backgroundColor = [UIColor whiteColor];
     _cgm_ctrl = segmentCtrl ;
-    _cgm_ctrl.view.frame=CGRectMake(0, 64, KmainScreenWidth,KmainScreenHeiht-64);
+    _cgm_ctrl.view.frame=CGRectMake(0, kNavbarHeight, KmainScreenWidth,KmainScreenHeiht - kNavbarHeight);
 
     _cgm_ctrl.sliderBackColor= [UIColor redColor];  //滑块默认颜色
     _cgm_ctrl.btnNormolColor = [UIColor blueColor]; //btn正常时的颜色

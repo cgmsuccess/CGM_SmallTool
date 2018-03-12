@@ -43,7 +43,7 @@
     _cgm_ctrl.btnSlectColor =  [UIColor redColor]; //选中时的颜色
     
     [self addChildViewController:_cgm_ctrl];  //不可缺少重要
-    _cgm_ctrl.view.frame=CGRectMake(0, 64, KmainScreenWidth,KmainScreenHeiht-64);
+    _cgm_ctrl.view.frame=CGRectMake(0, kNavbarHeight, KmainScreenWidth,KmainScreenHeiht -kNavbarHeight);
     [self.view addSubview:_cgm_ctrl.view];
 }
 

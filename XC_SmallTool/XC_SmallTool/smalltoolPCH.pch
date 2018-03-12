@@ -25,6 +25,23 @@
 #define KmainScreenWidth [UIScreen mainScreen].bounds.size.width
 #define KmainScreenHeiht [UIScreen mainScreen].bounds.size.height
 
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+#define kSCREEN_MAX_LENGTH (MAX(KmainScreenWidth, KmainScreenHeiht))
+#define kSCREEN_MIN_LENGTH (MIN(KmainScreenWidth, KmainScreenHeiht))
+
+#define IS_IPHONE4 (IS_IPHONE && kSCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE5 (IS_IPHONE && kSCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE6 (IS_IPHONE && kSCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE6P (IS_IPHONE && kSCREEN_MAX_LENGTH == 736.0)
+#define iPhoneX (KmainScreenWidth == 375.0f) && (KmainScreenHeiht == 812.0f) && IS_IPHONE
+#define kBottomSafeHeight ((iPhoneX)?(34):(0))  //距离底部的安全距离
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height //状态栏高度。 iPhone X 之前是 20 iPhone X 是 44
+#define kSystemNavHeight 44.0
+#define kNavbarHeight (kStatusBarHeight+kSystemNavHeight) //默认的NAVERgationBar 高度
+
+
 /**  自定义打印打印   */
 #ifdef DEBUG
 #define XCLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);

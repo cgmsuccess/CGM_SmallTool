@@ -125,8 +125,8 @@
     
     self.CtrlScroollview.delegate =self;
     self.CtrlScroollview.pagingEnabled = YES;
-    
     self.CtrlScroollview.bounces = NO;
+    
     [self.view addSubview:self.CtrlScroollview];
     for (int i= 0; i<self.CtrlArr.count; i++) {
         UIViewController *vc =self.CtrlArr[i];
@@ -147,7 +147,6 @@
     
 
     self.titleScrollview.backgroundColor=[UIColor blackColor];
-    
     self.titleScrollview.userInteractionEnabled =YES;
 
  

@@ -1,14 +1,37 @@
 
 ###  这是一个小工具Demo的一个整理，便于下次搭建项目方便。
 
+#### 简单的归类了一下项目的搭建。和 分段选择器。一些工具类
+
+[如果你喜欢，请送我一个星星鼓励✨✨✨✨✨✨✨✨✨✨吧😄](https://github.com/cgmsuccess/CGM_SmallTool)
 
 
+```
+    抽了业余时间把项目适配iPhone X 和 项目的搭建简单的写了一下。
+    适配了下  分段选择器的  iPhone X 的适配
+    
+```
+
+
+#### 分段选择器 iPhone X
+
+![test1.gif](https://upload-images.jianshu.io/upload_images/2018474-aa7855c2daa4c323.gif?imageMogr2/auto-orient/strip)
+
+
+#### 分段选择器 iPhone
+![test2.gif](https://upload-images.jianshu.io/upload_images/2018474-bbb094f32c6bf00f.gif?imageMogr2/auto-orient/strip)
 
 
 
 
 
 ### markdown 下面是语法参考
+
+
+
+
+
+
 
 
 ## Welcome to GitHub Pages

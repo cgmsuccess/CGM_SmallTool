@@ -15,7 +15,7 @@
 
 #### 分段选择器 iPhone X
 
-![test1.gif](https://upload-images.jianshu.io/upload_images/2018474-aa7855c2daa4c323.gif?imageMogr2/auto-orient/strip)
+![test2.gif](https://upload-images.jianshu.io/upload_images/2018474-95e2bb1df19a05c7.gif?imageMogr2/auto-orient/strip)
 
 
 #### 分段选择器 iPhone

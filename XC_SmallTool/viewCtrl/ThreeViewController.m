@@ -7,7 +7,7 @@
 //
 
 #import "ThreeViewController.h"
-
+#import "XCTabBarViewController.h"
 @interface ThreeViewController ()
 
 @end
@@ -19,6 +19,19 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = RandomColor ;
 
+    
+    
+    XCTabBarViewController *tabbr =  (XCTabBarViewController *)[UIApplication  sharedApplication].keyWindow.rootViewController ;
+    UITabBarItem * item =[tabbr.tabBar.items objectAtIndex:2];
+    item.badgeValue=[NSString stringWithFormat:@"✨"];;
+    
+    
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor redColor];
+    view.frame = CGRectMake(0, 0, 100, 100 );
+    view.center = self.view.center;
+    [self.view addSubview:view];
+    
 }
 
 - (void)didReceiveMemoryWarning {

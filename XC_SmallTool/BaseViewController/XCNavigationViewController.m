@@ -38,15 +38,17 @@
     [item setTitleTextAttributes:disableTextAttrs forState:UIControlStateDisabled];
     
     
-    //*************设置自定义的navagationBar 底部背景图片 *******************//
-    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:self, nil];
-    [navBar setBackgroundImage:[UIImage imageNamed:@"ic_底部背景2"] forBarMetrics:UIBarMetricsDefault];
-    //http://blog.csdn.net/G_eorge/article/details/51144017  擦嘞。不设置 navBar.translucent = YES ;整体view全部下降了 64 个单位,坑死了。 参考如上。
-    navBar.translucent = YES ;
     
-    //可注释点，显示系统自定义
-    //*************设置自定义的navagationBar 底部背景图片 *******************//
-
+//
+//    //*************设置自定义的navagationBar 底部背景图片 *******************//
+//    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:self, nil];
+//    [navBar setBackgroundImage:[UIImage imageNamed:@"ic_底部背景2"] forBarMetrics:UIBarMetricsDefault];
+//    //http://blog.csdn.net/G_eorge/article/details/51144017  擦嘞。不设置 navBar.translucent = YES ;整体view全部下降了 64 个单位,坑死了。 参考如上。
+//    navBar.translucent = YES ;
+//
+//    //可注释点，显示系统自定义
+//    //*************设置自定义的navagationBar 底部背景图片 *******************//
+//
 
 }
 

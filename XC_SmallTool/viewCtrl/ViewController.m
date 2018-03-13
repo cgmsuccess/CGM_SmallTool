@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "XCTabBarViewController.h"
+#import "UIBarButtonItem+Extension.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableVIew;
@@ -54,9 +55,26 @@
     [self.view addSubview:self.tableVIew];
     
     
+    /* 设置导航栏上面的内容 */
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(friendSearch) image:@"navigationbar_friendsearch" highImage:@"navigationbar_friendsearch_highlighted"];
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(pop) image:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted"];
+    
+    
+    //设置角标
     XCTabBarViewController *tabbr =  (XCTabBarViewController *)[UIApplication  sharedApplication].keyWindow.rootViewController ;
-    UITabBarItem * item =[tabbr.tabBar.items objectAtIndex:1];
-    item.badgeValue=[NSString stringWithFormat:@"1"];;
+    UITabBarItem * item =[tabbr.tabBar.items objectAtIndex:0];
+    item.badgeValue=[NSString stringWithFormat:@"demo"];;
+}
+
+#pragma mark touch  事件
+-(void)friendSearch
+{
+    XCLog(@"left");
+}
+
+-(void)pop
+{
+    XCLog(@"right");
 }
 
 
@@ -100,6 +118,14 @@
     return nil;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.01 ;
+}
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.01;
+}
 
 @end

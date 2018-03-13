@@ -23,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.rightBarButtonItem = nil ; //隐藏导航栏右边按钮
     
     self.title = @"分段控制器标签自适应";
     self.automaticallyAdjustsScrollViewInsets = NO ; //取消偏移
@@ -65,8 +66,6 @@
 {
     XCLog(@"xx-x-x-  cilckMore ")
 }
-
-
 
 -(void)dealloc
 {

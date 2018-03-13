@@ -8,7 +8,7 @@
 #import "XCTabBarViewController.h"
 #import "XCBaseViewController.h"
 #import "XCNavigationViewController.h"
-@interface XCTabBarViewController ()
+@interface XCTabBarViewController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -49,6 +49,14 @@
     }
     self.viewControllers = viewControllers;
     self.tabBar.tintColor = [UIColor redColor];
+    
+    self.delegate = self;
+    
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    XCLog(@" 点击了角标 %ld ",(unsigned long)self.selectedIndex );
 }
 
 

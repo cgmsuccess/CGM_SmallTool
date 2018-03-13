@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2447FC6C20576CEC007711B3 /* XC_PhotoSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC6B20576CEC007711B3 /* XC_PhotoSelect.m */; };
+		2447FC6F20576D0D007711B3 /* Demo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC6E20576D0D007711B3 /* Demo3ViewController.m */; };
+		2447FC7220577620007711B3 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC702057761F007711B3 /* NSString+MD5.m */; };
+		2447FC7620577754007711B3 /* CGM_UIpickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC7520577753007711B3 /* CGM_UIpickerView.m */; };
+		2447FC79205777FA007711B3 /* Demo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC78205777FA007711B3 /* Demo4ViewController.m */; };
+		2447FC7D20577F1E007711B3 /* CGM_AlertContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC7C20577F1E007711B3 /* CGM_AlertContoller.m */; };
+		2447FC8020577F40007711B3 /* Demo5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC7F20577F40007711B3 /* Demo5ViewController.m */; };
+		2447FC8A205783D3007711B3 /* XC_GaodeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC84205783D3007711B3 /* XC_GaodeMap.m */; };
+		2447FC8B205783D3007711B3 /* XC_baiduMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC87205783D3007711B3 /* XC_baiduMap.m */; };
+		2447FC8C205783D3007711B3 /* XC_MapNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2447FC88205783D3007711B3 /* XC_MapNavigation.m */; };
 		24630002205674600031355E /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 24630001205674600031355E /* UIBarButtonItem+Extension.m */; };
 		2463FFEF20561FE80031355E /* Demo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2463FFEE20561FE80031355E /* Demo2ViewController.m */; };
 		2463FFF52056644D0031355E /* XCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2463FFF42056644D0031355E /* XCTabBarViewController.m */; };
@@ -51,6 +61,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2447FC6A20576CEC007711B3 /* XC_PhotoSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XC_PhotoSelect.h; sourceTree = "<group>"; };
+		2447FC6B20576CEC007711B3 /* XC_PhotoSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XC_PhotoSelect.m; sourceTree = "<group>"; };
+		2447FC6D20576D0D007711B3 /* Demo3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo3ViewController.h; sourceTree = "<group>"; };
+		2447FC6E20576D0D007711B3 /* Demo3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo3ViewController.m; sourceTree = "<group>"; };
+		2447FC702057761F007711B3 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		2447FC712057761F007711B3 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		2447FC7420577753007711B3 /* CGM_UIpickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGM_UIpickerView.h; sourceTree = "<group>"; };
+		2447FC7520577753007711B3 /* CGM_UIpickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGM_UIpickerView.m; sourceTree = "<group>"; };
+		2447FC77205777FA007711B3 /* Demo4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo4ViewController.h; sourceTree = "<group>"; };
+		2447FC78205777FA007711B3 /* Demo4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo4ViewController.m; sourceTree = "<group>"; };
+		2447FC7B20577F1E007711B3 /* CGM_AlertContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGM_AlertContoller.h; sourceTree = "<group>"; };
+		2447FC7C20577F1E007711B3 /* CGM_AlertContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGM_AlertContoller.m; sourceTree = "<group>"; };
+		2447FC7E20577F40007711B3 /* Demo5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo5ViewController.h; sourceTree = "<group>"; };
+		2447FC7F20577F40007711B3 /* Demo5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo5ViewController.m; sourceTree = "<group>"; };
+		2447FC83205783D3007711B3 /* XC_GaodeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XC_GaodeMap.h; sourceTree = "<group>"; };
+		2447FC84205783D3007711B3 /* XC_GaodeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XC_GaodeMap.m; sourceTree = "<group>"; };
+		2447FC86205783D3007711B3 /* XC_baiduMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XC_baiduMap.h; sourceTree = "<group>"; };
+		2447FC87205783D3007711B3 /* XC_baiduMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XC_baiduMap.m; sourceTree = "<group>"; };
+		2447FC88205783D3007711B3 /* XC_MapNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XC_MapNavigation.m; sourceTree = "<group>"; };
+		2447FC89205783D3007711B3 /* XC_MapNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XC_MapNavigation.h; sourceTree = "<group>"; };
 		24630000205674600031355E /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		24630001205674600031355E /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		2463FFED20561FE80031355E /* Demo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2ViewController.h; sourceTree = "<group>"; };
@@ -126,6 +156,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2447FC6920576CEC007711B3 /* XC_PhotoSelect(图片选择) */ = {
+			isa = PBXGroup;
+			children = (
+				2447FC6A20576CEC007711B3 /* XC_PhotoSelect.h */,
+				2447FC6B20576CEC007711B3 /* XC_PhotoSelect.m */,
+			);
+			path = "XC_PhotoSelect(图片选择)";
+			sourceTree = "<group>";
+		};
+		2447FC7320577753007711B3 /* XC_UIpickerView(一级选择器) */ = {
+			isa = PBXGroup;
+			children = (
+				2447FC7420577753007711B3 /* CGM_UIpickerView.h */,
+				2447FC7520577753007711B3 /* CGM_UIpickerView.m */,
+			);
+			path = "XC_UIpickerView(一级选择器)";
+			sourceTree = "<group>";
+		};
+		2447FC7A20577F1E007711B3 /* AlerContrloller(泡泡) */ = {
+			isa = PBXGroup;
+			children = (
+				2447FC7B20577F1E007711B3 /* CGM_AlertContoller.h */,
+				2447FC7C20577F1E007711B3 /* CGM_AlertContoller.m */,
+			);
+			path = "AlerContrloller(泡泡)";
+			sourceTree = "<group>";
+		};
+		2447FC81205783D3007711B3 /* XC_Map(地图选择) */ = {
+			isa = PBXGroup;
+			children = (
+				2447FC82205783D3007711B3 /* GaodeMap */,
+				2447FC85205783D3007711B3 /* BaiduMap */,
+				2447FC88205783D3007711B3 /* XC_MapNavigation.m */,
+				2447FC89205783D3007711B3 /* XC_MapNavigation.h */,
+			);
+			path = "XC_Map(地图选择)";
+			sourceTree = "<group>";
+		};
+		2447FC82205783D3007711B3 /* GaodeMap */ = {
+			isa = PBXGroup;
+			children = (
+				2447FC83205783D3007711B3 /* XC_GaodeMap.h */,
+				2447FC84205783D3007711B3 /* XC_GaodeMap.m */,
+			);
+			path = GaodeMap;
+			sourceTree = "<group>";
+		};
+		2447FC85205783D3007711B3 /* BaiduMap */ = {
+			isa = PBXGroup;
+			children = (
+				2447FC86205783D3007711B3 /* XC_baiduMap.h */,
+				2447FC87205783D3007711B3 /* XC_baiduMap.m */,
+			);
+			path = BaiduMap;
+			sourceTree = "<group>";
+		};
 		2463FFF9205668C40031355E /* viewCtrl */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +308,8 @@
 		246D12252053C373001847C8 /* Demo3 */ = {
 			isa = PBXGroup;
 			children = (
+				2447FC6D20576D0D007711B3 /* Demo3ViewController.h */,
+				2447FC6E20576D0D007711B3 /* Demo3ViewController.m */,
 			);
 			path = Demo3;
 			sourceTree = "<group>";
@@ -247,6 +335,8 @@
 		246D12282053C373001847C8 /* Demo5 */ = {
 			isa = PBXGroup;
 			children = (
+				2447FC7E20577F40007711B3 /* Demo5ViewController.h */,
+				2447FC7F20577F40007711B3 /* Demo5ViewController.m */,
 			);
 			path = Demo5;
 			sourceTree = "<group>";
@@ -254,6 +344,8 @@
 		246D12292053C373001847C8 /* Demo4 */ = {
 			isa = PBXGroup;
 			children = (
+				2447FC77205777FA007711B3 /* Demo4ViewController.h */,
+				2447FC78205777FA007711B3 /* Demo4ViewController.m */,
 			);
 			path = Demo4;
 			sourceTree = "<group>";
@@ -261,6 +353,8 @@
 		246D122A2053C405001847C8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2447FC702057761F007711B3 /* NSString+MD5.m */,
+				2447FC712057761F007711B3 /* NSString+MD5.h */,
 				246D12332053C5FA001847C8 /* XCFoundation+Log.m */,
 				246D12362053C666001847C8 /* UIButton+CGMCilckBtn.h */,
 				246D12352053C666001847C8 /* UIButton+CGMCilckBtn.m */,
@@ -277,6 +371,10 @@
 		246D122B2053C40C001847C8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2447FC81205783D3007711B3 /* XC_Map(地图选择) */,
+				2447FC7A20577F1E007711B3 /* AlerContrloller(泡泡) */,
+				2447FC7320577753007711B3 /* XC_UIpickerView(一级选择器) */,
+				2447FC6920576CEC007711B3 /* XC_PhotoSelect(图片选择) */,
 				246D12382053C744001847C8 /* SegmentselectorView(分段选择器) */,
 			);
 			path = Tools;
@@ -442,23 +540,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				246D12482053C8AF001847C8 /* Demo1ViewController.m in Sources */,
+				2447FC8A205783D3007711B3 /* XC_GaodeMap.m in Sources */,
+				2447FC8020577F40007711B3 /* Demo5ViewController.m in Sources */,
 				2463FFF8205667D40031355E /* XCNavigationViewController.m in Sources */,
 				246D12322053C57D001847C8 /* NSString+Helper.m in Sources */,
 				246D124B2053C9B2001847C8 /* Demo1subViewController.m in Sources */,
+				2447FC7220577620007711B3 /* NSString+MD5.m in Sources */,
 				246D11F62053C15B001847C8 /* ViewController.m in Sources */,
 				246D122F2053C563001847C8 /* UIView+XCFrame.m in Sources */,
 				246D12012053C15B001847C8 /* main.m in Sources */,
+				2447FC79205777FA007711B3 /* Demo4ViewController.m in Sources */,
 				246D12372053C667001847C8 /* UIButton+CGMCilckBtn.m in Sources */,
 				246D12342053C5FA001847C8 /* XCFoundation+Log.m in Sources */,
 				2463FFF52056644D0031355E /* XCTabBarViewController.m in Sources */,
 				246D123D2053C7E8001847C8 /* CGM_ViewControllerSegment.m in Sources */,
+				2447FC6C20576CEC007711B3 /* XC_PhotoSelect.m in Sources */,
+				2447FC6F20576D0D007711B3 /* Demo3ViewController.m in Sources */,
+				2447FC7620577754007711B3 /* CGM_UIpickerView.m in Sources */,
 				24630002205674600031355E /* UIBarButtonItem+Extension.m in Sources */,
 				2463FFFC20566A1E0031355E /* SecondViewController.m in Sources */,
 				246D12412053C805001847C8 /* XCScrollView.m in Sources */,
+				2447FC8C205783D3007711B3 /* XC_MapNavigation.m in Sources */,
+				2447FC8B205783D3007711B3 /* XC_baiduMap.m in Sources */,
 				246D12452053C882001847C8 /* XCBaseViewController.m in Sources */,
 				246D11F32053C15B001847C8 /* AppDelegate.m in Sources */,
 				2463FFFF20566A290031355E /* ThreeViewController.m in Sources */,
 				2463FFEF20561FE80031355E /* Demo2ViewController.m in Sources */,
+				2447FC7D20577F1E007711B3 /* CGM_AlertContoller.m in Sources */,
 				246D124E2053D635001847C8 /* CGM_ViewControllerAutoSegment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

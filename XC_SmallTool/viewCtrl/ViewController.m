@@ -48,10 +48,9 @@
 
 -(void)setUI
 {
-    self.automaticallyAdjustsScrollViewInsets = NO ;
     [self.tableVIew registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
-    self.dataSource = @[@"分段选择器标签自适应Demo1",@"分段选择器标签不适应Demo2",];
+    self.dataSource = @[@"分段选择器标签自适应Demo1",@"分段选择器标签不适应Demo2",@"照片选择Demo3",@"一级选择器Demo4",@"简单的泡泡Demo5"];
     [self.view addSubview:self.tableVIew];
     
     

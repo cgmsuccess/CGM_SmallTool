@@ -60,37 +60,4 @@
 }
 
 
-#pragma mark 这里可以设置某个页面可以旋转
-- (BOOL)shouldAutorotate
-{
-//    BaseNavigationController *nav = (BaseNavigationController *)self.selectedViewController;
-//    if ([nav.visibleViewController isKindOfClass:[NSClassFromString(@"MessageViewController") class]])
-//    {
-//        return YES;
-//    }
-    return NO;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-//    BaseNavigationController *nav = (BaseNavigationController *)self.selectedViewController;
-//    //    topViewController = nav.lastObj
-//    if ([nav.visibleViewController isKindOfClass:[NSClassFromString(@"MessageViewController") class]])
-//    {
-//        return UIInterfaceOrientationMaskAllButUpsideDown;
-//    }
-    return UIInterfaceOrientationMaskPortrait;
-}
-
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
-{
-//    BaseNavigationController *nav = (BaseNavigationController *)self.selectedViewController;
-//    if ([nav.visibleViewController isKindOfClass:[NSClassFromString(@"MessageViewController") class]])
-//    {
-//        return UIInterfaceOrientationLandscapeLeft;
-//    }
-    return UIInterfaceOrientationPortrait;
-}
-
-
 @end
